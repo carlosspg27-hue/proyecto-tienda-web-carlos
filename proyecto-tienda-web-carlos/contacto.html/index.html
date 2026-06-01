@@ -20,78 +20,131 @@
                 <a href="../index.html" class="nav-link">Inicio</a>
                 <a href="../contacto.html" class="nav-link active">Contacto</a>
                 <a href="../tienda.html" class="nav-link">Tienda</a>
-                <a href="../historia.html" class="nav-link">Historia</a>
+                <a href="../historia.html/" class="nav-link">Historia</a>
             </div>
         </nav>
     </header>
 
     <main class="contact-main">
+        
         <section class="contact-hero">
             <div class="container text-center">
-                <h1>Get in Touch</h1>
-                <p>¿Tienes alguna duda sobre nuestros productos sustentables o tu pedido? Déjanos un mensaje y te responderemos a la brevedad.</p>
+                <div class="hero-content-container">
+                    <h1>accede a nuestra pagina web :D</h1>
+                    <p>¿Tienes alguna queja o sugerencia sobre nuestra pagina web? o no sabes como hacer tu pedido regirstrate gratis y resuelve tus duda y problemas con nostros</p>
+                </div>
             </div>
         </section>
 
         <section class="contact-content-section">
             <div class="container contact-grid">
-                <div class="contact-info-panel">
+                
+                <div class="contact-info-panel-container">
                     <h2>Contact Information</h2>
                     <p class="panel-desc">Utiliza nuestros canales oficiales para una atención directa e inmediata.</p>
-                    <div class="info-channels">
-                        <div class="channel-card">
+                    
+                    <div class="info-channels-container">
+                        <article class="channel-card-container">
                             <span class="channel-icon">📧</span>
-                            <div><h3>Correo Electrónico</h3><p>soporte@ecomarket.com</p></div>
-                        </div>
-                        <div class="channel-card">
+                            <div class="channel-details-container">
+                                <h3>Correo Electrónico</h3>
+                                <p>soporte@ecomarket.com</p>
+                            </div>
+                        </article>
+                        
+                        <article class="channel-card-container">
                             <span class="channel-icon">📞</span>
-                            <div><h3>Línea Telefónica</h3><p>+1 (555) 0199</p></div>
-                        </div>
+                            <div class="channel-details-container">
+                                <h3>Línea Telefónica</h3>
+                                <p>+1 (555) 0199</p>
+                            </div>
+                        </article>
                     </div>
                 </div>
-                <div class="contact-form-panel">
+                
+                <div class="contact-form-panel-container">
                     <h2>Send Us a Message</h2>
-                    <form class="pure-form" action="#" method="POST">
-                        <div class="form-group">
+                    
+                    <form class="pure-form" id="contact-form">
+                        <div class="form-group-container">
                             <label for="name">Nombre Completo *</label>
-                            <input type="text" id="name" placeholder="Ej. Carlos Pérez" required>
+                            <input type="text" id="name" name="fullname" placeholder="Ej. Carlos Pérez" required>
                         </div>
-                        <div class="form-group">
+                        
+                        <div class="form-group-container">
                             <label for="email">Correo Electrónico *</label>
-                            <input type="email" id="email" placeholder="Ej. carlos@correo.com" required>
+                            <input type="email" id="email" name="email" placeholder="Ej. carlos@correo.com" required>
                         </div>
-                        <div class="form-group">
+                        
+                        <div class="form-group-container">
                             <label for="message">Mensaje o Consulta *</label>
-                            <textarea id="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
                         </div>
+                        
                         <button type="submit" class="submit-form-btn">🚀 Enviar Mensaje</button>
                     </form>
+
+                    <div id="success-message" class="success-alert-container" style="display: none;">
+                        <p>🌱 ¡Mensaje enviado con éxito! Tu consulta ha sido simulada correctamente y los campos se han reiniciado.</p>
+                    </div>
                 </div>
+
             </div>
         </section>
     </main>
 
     <footer class="main-footer">
         <div class="container footer-columns">
-            <div class="footer-info">
+            <div class="footer-info-container">
                 <h5>EcoMarket</h5>
                 <p>Ethical shopping for conscious consumers.</p>
             </div>
-            <div class="footer-links">
+            <div class="footer-links-container">
                 <h6>Explorar</h6>
                 <a href="../index.html">Inicio</a>
                 <a href="../tienda.html">Tienda</a>
             </div>
-            <div class="footer-links">
+            <div class="footer-links-container">
                 <h6>Soporte</h6>
                 <a href="../contacto.html">Contacto</a>
-                <a href="../historia.html">Historia</a>
+                <a href="../historia.html/">Historia</a>
             </div>
         </div>
-        <div class="footer-credits">
+        <div class="footer-credits-container">
             <p>&copy; 2026 EcoMarket. Proyecto Final HTML y CSS Puro.</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contact-form');
+            const successAlert = document.getElementById('success-message');
+
+            form.addEventListener('submit', (e) => {
+                // 1. Evita que la página intente buscar un servidor inexistente y dé el Error 405
+                e.preventDefault();
+
+                // 2. Muestra la alerta de éxito en pantalla
+                successAlert.style.display = 'block';
+                successAlert.style.opacity = '0';
+                setTimeout(() => {
+                    successAlert.style.transition = 'opacity 0.5s ease';
+                    successAlert.style.opacity = '1';
+                }, 10);
+
+                // 3. ¡REINICIA EL FORMULARIO! (Limpia todos los cuadros de texto automáticamente)
+                form.reset();
+
+                // 4. Oculta la alerta automáticamente después de 5 segundos
+                setTimeout(() => {
+                    successAlert.style.opacity = '0';
+                    setTimeout(() => {
+                        successAlert.style.display = 'none';
+                    }, 500);
+                }, 5000);
+            });
+        });
+    </script>
 
 </body>
 </html>
