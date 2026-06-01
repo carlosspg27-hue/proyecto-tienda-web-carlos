@@ -1,0 +1,243 @@
+/* ESTILOS DE LA BARRA DE NAVEGACIÓN */
+.logo-text {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.nav-link.active {
+    color: var(--primary-color);
+}
+
+/* COMPONENTES DEL HERO */
+.hero-tag {
+    background-color: rgba(46, 204, 113, 0.3);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.hero-content h1 {
+    font-family: var(--font-display);
+    font-size: 3.4rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+}
+
+/* BOTONES DEL HERO */
+.btn {
+    padding: 0.85rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white-surface);
+    margin-right: 1rem;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--white-surface);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* BOTONES DE FILTRO (PILLS) */
+.filter-pill {
+    padding: 0.45rem 1.2rem;
+    border-radius: 20px;
+    border: 1px solid var(--text-dark);
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.filter-pill.active {
+    background-color: var(--text-dark);
+    color: var(--white-surface);
+}
+
+/* COMPONENTE DE SECCIÓN DE ENLACES (Igual a la Captura) */
+.cat-link-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cat-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.cat-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #0026e6; /* Azul fuerte e intenso de los enlaces */
+    text-decoration: underline;
+    margin-bottom: 0.2rem;
+}
+
+.cat-action-link {
+    font-size: 0.95rem;
+    color: #0026e6;
+    text-decoration: underline;
+}
+
+/* TARJETAS DE PRODUCTOS DE LA GALERÍA */
+.products-header h2 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+}
+
+.view-all-button {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.product-item {
+    background-color: var(--white-surface);
+    border-radius: var(--card-radius);
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--interface-shadow);
+}
+
+.product-visual {
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Fondos pastel de los contenedores de artículos */
+.thumb-beige { background-color: #fef3c7; }
+.thumb-gray { background-color: #f1f5f9; }
+.thumb-blue { background-color: #e0f2fe; }
+.thumb-yellow { background-color: #fef08a; }
+.thumb-green { background-color: #d1fae5; }
+.thumb-pink { background-color: #ffe4e6; }
+
+.emoji-display {
+    font-size: 4rem;
+}
+
+.badge-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: var(--secondary-color);
+    color: var(--white-surface);
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.badge-tag.tag-blue { background-color: #3b82f6; }
+.badge-tag.tag-green { background-color: #10b981; }
+
+.product-details {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.product-meta h4 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.price {
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.product-details p {
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    opacity: 0.7;
+    margin-bottom: 1.2rem;
+    flex-grow: 1;
+}
+
+.add-to-cart-btn {
+    background-color: #f8fafc;
+    border: none;
+    color: var(--text-dark);
+    padding: 0.6rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* COMPONENTES DEL FOOTER */
+.footer-info h5 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.footer-info p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.footer-links h6 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+.footer-links a {
+    display: block;
+    color: var(--text-dark);
+    opacity: 0.7;
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+}
+
+.footer-credits {
+    border-top: 1px solid rgba(15, 23, 42, 0.06);
+    padding-top: 1.2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}

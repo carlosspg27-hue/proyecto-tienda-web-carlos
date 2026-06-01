@@ -1,0 +1,126 @@
+/* ==========================================================================
+   COMPONENTES DEL MÓDULO SOBRE NOSOTROS / HISTORIA
+   ========================================================================== */
+
+   .text-center {
+    text-align: center;
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    opacity: 0.7;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Bloque visual decorativo */
+.mission-text-block h2 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    color: var(--secondary-color);
+}
+
+.mission-text-block p {
+    font-size: 1.05rem;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+.visual-placeholder {
+    background-color: var(--background-soft);
+    height: 320px;
+    border-radius: var(--card-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed var(--secondary-color);
+}
+
+.visual-emoji {
+    font-size: 6rem;
+}
+
+/* Tarjetas de Pilares */
+.pillar-card {
+    background-color: var(--white-surface);
+    padding: 2.5rem 2rem;
+    border-radius: var(--card-radius);
+    text-align: center;
+    border: 1px solid rgba(15, 23, 42, 0.05);
+    box-shadow: var(--interface-shadow);
+}
+
+.pillar-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.pillar-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+}
+
+.pillar-card p {
+    font-size: 0.9rem;
+    opacity: 0.75;
+}
+
+/* Fichas del Equipo (Developers) */
+.team-card {
+    background-color: var(--white-surface);
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    border-radius: var(--card-radius);
+    padding: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    box-shadow: var(--interface-shadow);
+    transition: transform 0.2s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-4px);
+}
+
+.team-avatar {
+    font-size: 3rem;
+    background-color: #f1f5f9;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.team-info h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.1rem;
+}
+
+.team-role {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 0.6rem;
+}
+
+.team-info p {
+    font-size: 0.85rem;
+    opacity: 0.75;
+    line-height: 1.4;
+}

@@ -1,0 +1,28 @@
+/* EFECTOS INTERACTIVOS (HOVER) */
+.nav-link, .filter-pill, .view-all-button, .product-item, .add-to-cart-btn {
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.filter-pill:hover {
+    background-color: var(--text-dark);
+    color: var(--white-surface);
+}
+
+.view-all-button:hover {
+    opacity: 0.8;
+}
+
+/* Animación de elevación controlada para las tarjetas de la galería */
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
+}
+
+.add-to-cart-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white-surface);
+}
