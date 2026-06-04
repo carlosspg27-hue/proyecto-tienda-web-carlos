@@ -31,3 +31,130 @@ body {
     margin: 0 auto;
     padding: 0 2rem;
 }
+/* NAVEGACIÓN SIMÉTRICA */
+.main-header {
+    background-color: var(--white-surface);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+    padding: 1.2rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+/* BANNER PRINCIPAL */
+.hero-section {
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=1800&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 9rem 2rem;
+    color: var(--white-surface);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin-left: 3rem;
+}
+
+/* FILTROS HORIZONTALES */
+.filters-section {
+    padding: 2.5rem 0 1rem 0;
+}
+
+.container-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* ENLACES TEXTUALES (2 COLUMNAS SIMÉTRICAS) */
+.category-links-section {
+    padding: 3rem 0;
+}
+
+.category-links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+/* GRID DE PRODUCTOS (3 Columnas fluidas en Escritorio) */
+.featured-products-section {
+    padding: 4rem 0;
+}
+
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2.5rem;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* PIE DE PÁGINA */
+.main-footer {
+    background-color: var(--background-soft);
+    padding: 4rem 2rem 2rem 2rem;
+    border-top: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+/* RESPONSIVE DESIGN (MEDIA QUERIES) */
+@media (max-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .products-grid, .category-links-grid, .footer-columns {
+        grid-template-columns: 1fr;
+    }
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .hero-content {
+        margin-left: 0;
+        text-align: center;
+    }
+    .products-header {
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+    }
+}

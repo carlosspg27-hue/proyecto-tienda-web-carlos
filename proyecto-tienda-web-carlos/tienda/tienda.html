@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoMarket - Tienda Sostenible</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.cs">
+    <link rel="stylesheet" href="../css/animations.css">
+
+    <style>
+        .products-grid {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)) !important;
+            gap: 20px !important;
+            width: 100% !important;
+        }
+
+        .product-item {
+            display: flex !important;
+            flex-direction: column !important;
+            max-width: 100% !important;
+            height: auto !important;
+            border: 1px solid #eef0ed !important;
+            border-radius: 8px !important;
+            overflow: hidden !important;
+            background: #ffffff !important;
+        }
+
+        .product-visual {
+            width: 100% !important;
+            height: 180px !important;
+            overflow: hidden !important;
+            position: relative !important;
+        }
+
+        .product-img-fluid {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            display: block !important;
+        }
+
+        .product-details {
+            padding: 12px !important;
+        }
+        .product-meta h4 {
+            font-size: 1rem !important;
+            margin: 0 !important;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="nav-brand">
+                <span class="logo-text">♻️ EcoMarket</span>
+            </div>
+            <div class="nav-menu">
+                <a href=/index.html" class="nav-link">Inicio</a>
+                <a href="/contacto/contacto.html" class="nav-link">Contacto</a>
+                <a href="/tienda/tienda.html" class="nav-link active">Tienda</a>
+                <a href="/historia/historia.html" class="nav-link">Historia</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="store-banner">
+        <div class="container text-center">
+            <h1>Our Sustainable Catalog</h1>
+            <p>Explora nuestra selección completa de alternativas reutilizables y ecológicas.</p>
+        </div>
+    </section>
+
+    <section class="filters-section">
+        <div class="filters-container">
+            <button class="filter-btn active" data-target="all">All</button>
+            <button class="filter-btn" data-target="bamboleo">bamboleo</button>
+            <button class="filter-btn" data-target="textiles">textiles</button>
+            <button class="filter-btn" data-target="kitchen">kitchen</button>
+            <button class="filter-btn" data-target="zero-waste">zero Waste</button>
+        </div>
+    </section>
+
+    <main class="store-main-container container">
+        
+        <aside class="store-sidebar">
+            <div class="sidebar-widget">
+                <h3>Categories</h3>
+                <ul class="sidebar-list">
+                    <li><button class="sidebar-link active" data-target="all">All Products</button></li>
+                    <li><button class="sidebar-link" data-target="bamboleo">bamboleo</button></li>
+                    <li><button class="sidebar-link" data-target="textiles">textiles</button></li>
+                    <li><button class="sidebar-link" data-target="kitchen">kitchen</button></li>
+                    <li><button class="sidebar-link" data-target="zero-waste">zero Waste</button></li>
+                </ul>
+            </div>
+        </aside>
+
+        <section class="store-products-catalog">
+            
+            <div class="catalog-utility-bar">
+                <p class="results-count" id="catalog-counter">Showing 20 of 20 products</p>
+                <div class="sort-select-wrapper">
+                    <label for="sort-products">Sort by:</label>
+                    <select id="sort-products">
+                        <option value="featured">Featured Finds</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="products-grid">
+                
+                <article class="product-item" data-category="bamboleo">
+                    <div class="product-visual thumb-beige">
+                        <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04" alt="Bamboo Toothbrush" class="product-img-fluid">
+                        <span class="badge-tag">Best Seller</span>
+                    </div>
+                    <div class="product-details">
+                        <div class="product-meta"><h4>Bamboo Toothbrush</h4><span class="price">$14.99</span></div>
+                        <p>Mangos de bambú moso biodegradable y cerdas suaves de carbón vegetal.</p>
+                        <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-item" data-category="bamboleo">
+                    <div class="product-visual thumb-beige">
+                        <img src="https://images.unsplash.com/photo-1531346878377-a5be20888e57" alt="Recycled Notebook" class="product-img-fluid">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-meta"><h4>Recycled Notebook</h4><span class="price">$14.99</span></div>
+                        <p>Libreta con hojas de papel certificado FSC y bolígrafo ecológico de bambú.</p>
+                        <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-item" data-category="bamboleo">
+                    <div class="product-visual thumb-beige">
+                        <img src="https://images.unsplash.com/photo-1586105251261-72a756497a11" alt="Phone Case" class="product-img-fluid">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-meta"><h4>Biodegradable Case</h4><span class="price">$14.99</span></div>
+                        <p>Funda protectora fabricada a partir de paja de trigo reciclada y compostable.</p>
+                        <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-item" data-category="bamboleo">
+                    <div class="product-visual thumb-beige">
+                        <img src="https://images.unsplash.com/photo-1583947215259-38e31be8751f" alt="Kitchen Brush" class="product-img-fluid">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-meta"><h4>Natural Fiber Brush</h4><span class="price">$14.99</span></div>
+                        <p>Cepillo con mango ergonómico de madera y cerdas de sisal ideales para fregar platos.</p>
+                        <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-item" data-category="textiles">
+                    <div class="product-visual thumb-gray">
+                        <img src="https://images.unsplash.com/photo-1614859094589-9b936d808b29" alt="Cotton Pads" class="product-img-fluid">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-meta"><h4>Reusable Cotton Pads</h4><span class="price">$14.99</span></div>
+                        <p>Pack de 10 discos de algodón orgánico lavables y suaves con la piel.</p>
+                        <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-item" data-category="textiles">
+                    <div class="product-visual thumb-gray">
+                        <img src="https://images.unsplash.com/photo-1607344645866-009c320c5ab8" alt="Mesh Bags" class="product-img-fluid">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-meta"><h4>Cotton Mesh Bags</h4><span class="price">$14.99</span></div>
+                        <p>Bolsas de lona y malla transpirable para compras sin residuos plásticos.</p>
+                        <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-item" data-category="textiles">
+                    <div class="product-visual thumb-gray">
+                        <img src="https://images.unsplash.com/photo-1544816155-12df9643f363" alt="Canvas Tote" class="product-img-fluid">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-meta"><h4>Heavy Canvas Tote</h4><span class="price">$14.99</span></div>
+                        <p>Bolso de tela de algodón crudo orgánico de alta resistencia con costura cruzada.</p>
+                        <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-item" data-category="textiles">
+                    <div class="product-visual thumb-gray">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62" alt="Recycled Backpack" class="product-img-fluid">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-meta"><h4>PET Recycled Backpack</h4><span class="price">$14.99</span></div>
+                        <p>Mochila impermeable construida íntegramente de fibras tejidas de poliéster PET.</p>
+                        <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-item" data-category="textiles">
+                    <div class="product-visual thumb-gray">
+                        <img src="https://images.unsplash.com/photo-1610214474759-b14800e8fcae" alt="Unpaper Towels" class="product-img-fluid">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-meta"><h4>Unpaper Kitchen Towels</h4><span class="price">$14.99</span></div>
+                        <p>Paños textiles ultra absorbentes de franela orgánica lavables y antimicrobianos.</p>
+                        <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-item" data-category="kitchen">
+                    <div class="product-visual thumb-blue">
+                        <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8" alt="Steel Bottle" class="product-img-fluid">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-meta"><h4>Stainless Steel Bottle</h4><span class="price">$14.99</span></div>
+                        <p>Botella duradera y térmica de doble pared con funda protectora de silicona.</p>
+                        <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-item" data-category="kitchen">
+                    <div class="product-visual thumb-blue">
+                        <img src="https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7" alt="Steel Lunchbox" class="product-img-fluid">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-meta"><h4>Stainless Steel Bento</h4><span class="price">$14.99</span></div>
+                        <p>Contenedor de comida hermético con divisiones y cierres metálicos de seguridad.</p>
+                        <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-item" data-category="kitchen">
+                    <div class="product-visual thumb-blue">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd" alt="Collapsible Cup" class="product-img-fluid">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-meta"><h4>Reusable Coffee Cup</h4><span class="price">$14.99</span></div>
+                        <p>Taza portátil de silicona de grado alimenticio libre de BPA con tapa térmica.</p>
+                        <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-item" data-category="zero-waste">
+                    <div class="product-visual thumb-beige">
+                        <img src="https://images.unsplash.com/photo-1600881333168-2ef49b341f30" alt="Cork Yoga Mat" class="product-img-fluid">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-meta"><h4>Cork Yoga Mat</h4><span class="price">$14.99</span></div>
+                        <p>Superficie antideslizante de corcho renovable y base de TPE para óptimo agarre.</p>
+                        <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-item" data-category="zero-waste">
+                    <div class="product-visual thumb-yellow">
+                        <img src="https://images.unsplash.com/photo-1602928321679-560bb453f190" alt="Diffuser" class="product-img-fluid">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-meta"><h4>Essential Oil Diffuser</h4><span class="price">$14.99</span></div>
+                        <p>Difusor ultrasónico con base texturizada efecto madera y luces LED suaves.</p>
+                        <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-item" data-category="zero-waste">
+                    <div class="product-visual thumb-gray">
+                        <img src="https://images.unsplash.com/photo-1626245341393-277508dae77b" alt="Safety Razor" class="product-img-fluid">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-meta"><h4>Safety Razor Steel</h4><span class="price">$14.99</span></div>
+                        <p>Rastrillo de metal reutilizable de larga duración para un rasurado sin plástico.</p>
+                        <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-item" data-category="zero-waste">
+                    <div class="product-visual thumb-gray">
+                        <img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19" alt="Natural Cream" class="product-img-fluid">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-meta"><h4>Organic Body Cream</h4><span class="price">$14.99</span></div>
+                        <p>Crema humectante vegana empacada en tubo de aluminio reciclable de origen ético.</p>
+                        <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-item" data-category="zero-waste">
+                    <div class="product-visual thumb-yellow">
+                        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae" alt="Garden Pot" class="product-img-fluid">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-meta"><h4>Eco-Friendly Garden Pot</h4><span class="price">$14.99</span></div>
+                        <p>Maceta de fibra vegetal compacta perfecta para cultivar tu propio huerto urbano.</p>
+                        <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-item" data-category="zero-waste">
+                    <div class="product-visual thumb-yellow">
+                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b" alt="Seed Bombs" class="product-img-fluid">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-meta"><h4>Wildflower Seed Bombs</h4><span class="price">$14.99</span></div>
+                        <p>Esferas de arcilla y sustrato cargadas de semillas listas para plantar flores.</p>
+                        <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-item" data-category="zero-waste">
+                    <div class="product-visual thumb-yellow">
+                        <img src="https://images.unsplash.com/photo-1607006342456-9c8a009e27c6" alt="Solid Shampoo" class="product-img-fluid">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-meta"><h4>Solid Shampoo Bar</h4><span class="price">$14.99</span></div>
+                        <p>Fórmula concentrada con ingredientes vegetales y aceites puros sin envases.</p>
+                        <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-item" data-category="zero-waste">
+                    <div class="product-visual thumb-yellow">
+                        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef" alt="Shaving Soap" class="product-img-fluid">
+                        <span class="badge-tag tag-green">Eco</span>
+                    </div>
+                    <div class="product-details">
+                        <div class="product-meta"><h4>Organic Shaving Bar</h4><span class="price">$14.99</span></div>
+                        <p>Barra humectante artesanal a base de coco y eucalipto para el afeitado clásico.</p>
+                        <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="catalog-pagination">
+                <a href="#" class="page-num active">1</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-columns">
+            <div class="footer-info">
+                <h5>EcoMarket</h5>
+                <p>Ethical shopping for conscious consumers.</p>
+            </div>
+            <div class="footer-links">
+                <h6>Explorar</h6>
+                <a href="/index.html">Inicio</a>
+                <a href="/tienda/tienda.html">Tienda</a>
+            </div>
+            <div class="footer-links">
+                <h6>Soporte</h6>
+                <a href="/contacto/contacto.html">Contacto</a>
+                <a href="/historia/historia.html">Historia</a>
+            </div>
+        </div>
+        <div class="footer-credits">
+            <p>&copy; 2026 EcoMarket. Proyecto Final HTML y CSS Puro.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.filter-btn, .sidebar-link');
+            const products = document.querySelectorAll('.product-item');
+            const counterText = document.getElementById('catalog-counter');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    const targetCategory = button.getAttribute('data-target');
+
+                    filterButtons.forEach(btn => {
+                        if(btn.getAttribute('data-target') === targetCategory) {
+                            btn.classList.add('active');
+                        } else {
+                            btn.classList.remove('active');
+                        }
+                    });
+
+                    let visibleCount = 0;
+                    products.forEach(product => {
+                        const productCategory = product.getAttribute('data-category');
+                        
+                        if (targetCategory === 'all' || productCategory === targetCategory) {
+                            product.style.display = 'flex';
+                            visibleCount++;
+                            setTimeout(() => product.style.opacity = '1', 50);
+                        } else {
+                            product.style.opacity = '0';
+                            product.style.display = 'none';
+                        }
+                    });
+
+                    counterText.textContent = `Showing ${visibleCount} of 20 products`;
+                });
+            });
+        });
+    </script>
+</body>
+</html>

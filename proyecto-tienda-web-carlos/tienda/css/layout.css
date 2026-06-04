@@ -1,0 +1,53 @@
+/* ==========================================================================
+   MAQUETACIÓN DE LA TIENDA (LAYOUT ADICIONAL)
+   ========================================================================== */
+
+   .store-banner {
+    background-color: var(--background-soft);
+    padding: 3.5rem 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.04);
+}
+
+.store-banner h1 {
+    font-family: var(--font-display);
+    font-size: 2.6rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Contenedor principal dividido con Grid en Escritorio */
+.store-main-container {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+
+/* Barra lateral */
+.store-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.catalog-utility-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+/* ADAPTACIÓN RESPONSIVA PARA DISPOSITIVOS MÓVILES */
+@media (max-width: 768px) {
+    .store-main-container {
+        grid-template-columns: 1fr; /* Pasa a una sola columna */
+        gap: 2rem;
+    }
+    
+    .store-sidebar {
+        display: none; /* Oculta la barra lateral en móviles para priorizar el catálogo */
+    }
+}

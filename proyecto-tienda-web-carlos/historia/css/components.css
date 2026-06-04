@@ -1,0 +1,74 @@
+/* ==========================================================================
+   ESTILOS DE CONTENEDORES PARA LA SECCIÓN HISTORIA
+   ========================================================================== */
+
+/* Contenedor del Texto del Banner */
+.hero-content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Contenedor del Bloque de Texto Izquierdo */
+.mission-text-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+/* Contenedor específico de la lista de pilares */
+.values-list-container {
+    margin-top: 25px;
+    padding: 15px 20px;
+    background-color: #f1f5f9; /* Fondo suave para resaltar los valores */
+    border-radius: 8px;
+    border-left: 4px solid #2d6a4f; /* Línea verde decorativa lateral */
+}
+
+/* Contenedor de la Imagen */
+.mission-visual-container {
+    flex: 1;
+    height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Contenedor/Tarjeta del Desarrollador (Developer Card) */
+.developer-card-container {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 450px;
+    margin: 0 auto; /* Centra la tarjeta en su sección */
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.developer-card-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor interno del Avatar */
+.avatar-container {
+    background-color: #f8fafc;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border: 2px solid #e2e8f0;
+}
+
+/* Contenedor de los textos internos de la tarjeta */
+.team-info-container {
+    flex: 1;
+}
