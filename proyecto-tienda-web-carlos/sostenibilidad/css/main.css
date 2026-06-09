@@ -1,14 +1,177 @@
-/* VARIABLES DE COLOR OBLIGATORIAS */
 :root {
-    --primary-color: #2ecc71;      /* Verde vivo principal */
-    --secondary-color: #27ae60;    /* Verde oscuro secundario */
-    --background-soft: #f5f5dc;    /* Beige de fondo suave */
-    --text-dark: #0f172a;          /* Gris oscuro de contraste */
-    --white-surface: #ffffff;      
-    
-    --card-radius: 16px;
-    --interface-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
-    
-    --font-display: 'Playfair Display', Georgia, serif;
-    --font-body: 'Montserrat', Arial, sans-serif;
+    --color-primario: #2e7d32;      
+    --color-primario-light: #e8f5e9;
+    --color-acento: #81c784;       
+    --color-texto-oscuro: #263238; 
+    --color-texto-mutado: #78909c; 
+    --color-borde: #cfd8dc;         
+    --sombra-suave: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.carbono-form {
+    background-color: #ffffff;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: var(--sombra-suave);
+    border: 1px solid rgba(46, 125, 50, 0.1);
+    font-family: sans-serif;
+}
+
+.form-title {
+    color: var(--color-primario);
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    border-left: 5px solid var(--color-primario);
+    padding-left: 12px;
+}
+
+.grupo-formulario {
+    margin-bottom: 35px;
+}
+
+.label-principal {
+    display: block;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-texto-oscuro);
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+
+.range-container {
+    padding: 0 10px;
+}
+
+.input-range {
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: var(--color-borde);
+    outline: none;
+    margin: 15px 0;
+}
+
+
+.input-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--color-primario);
+    cursor: pointer;
+    transition: transform 0.1s ease, background-color 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: var(--color-texto-mutado);
+    font-weight: 500;
+    padding: 0 2px;
+}
+
+.checkbox-group {
+    background-color: var(--color-primario-light);
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px dashed var(--color-acento);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: var(--color-texto-oscuro);
+    user-select: none;
+    transition: color 0.2s ease;
+}
+
+.checkbox-label:last-child {
+    margin-bottom: 0;
+}
+
+
+.checkbox-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+.custom-checkbox {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 18px;
+    width: 18px;
+    background-color: #ffffff;
+    border: 2px solid var(--color-borde);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+
+.checkbox-label:hover input ~ .custom-checkbox {
+    border-color: var(--color-primario);
+}
+
+
+.checkbox-label input:checked ~ .custom-checkbox {
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+}
+
+.custom-checkbox::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-label input:checked ~ .custom-checkbox::after {
+    display: block;
+}
+
+.btn-submit-carbono {
+    display: block;
+    width: 100%;
+    background-color: var(--color-primario);
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-top: 10px;
+    box-shadow: 0 3px 10px rgba(46, 125, 50, 0.2);
+}
+
+.btn-submit-carbono:hover {
+    background-color: #1b5e20;
+}
+
+.btn-submit-carbono:active {
+    transform: scale(0.98);
 }

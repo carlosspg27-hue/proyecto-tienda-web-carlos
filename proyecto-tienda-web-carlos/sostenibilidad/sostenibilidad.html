@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="css/animations.css">
         <link rel="stylesheet" href="css/components.css">
+        <link rel="stylesheet" href="../css/main.css">
     </head>
 <body>
     <header class="main-header">
@@ -17,25 +18,105 @@
                 <span class="logo-text">♻️ sostenibilidad</span>
             </div>
             <div class="nav-menu">
-                <a href="../index.html" class="nav-link active">Inicio</a>
+                <a href="../index.html" class="nav-link">Inicio</a>
                 <a href="../contacto/contacto.html" class="nav-link">Contacto</a>
                 <a href="../tienda/tienda.html" class="nav-link">Tienda</a>
                 <a href="../historia/historia.html" class="nav-link">Historia</a>
-                <a href="#"class="nav-link">sostenibilidad</a>
+                <a href="#" class="nav-link active">sostenibilidad</a>
             </div>
         </nav>
     </header>
+    
     <main class="sostenibilidad-main">
-
-     <section class="contact-hero">
+        <section class="contact-hero">
             <div class="container text-center">
                 <div class="hero-content-container">
-                    <h1>accede a nuestra seccion de sostenibilidad:D</h1>
+                    <h1>accede a nuestra seccion de sostenibilidad :D</h1>
                 </div>
             </div>
         </section>
+
         <section class="sostenibilidad-content-section">
-             <div class="container sostenibilidad-grid">
+            <div class="container sostenibilidad-grid">
+
+                <form class="carbono-form" action="#" method="POST">
+                    <h2 class="form-title">Tu Estilo de Vida</h2>
+                    
+                    <div class="grupo-formulario">
+                        <label for="rango-desperdicio" class="label-principal">
+                            ¿Qué tanta comida se vence o se desperdicia en tu hogar?
+                        </label>
+                        <div class="range-container">
+                            <input 
+                                type="range" 
+                                id="rango-desperdicio" 
+                                name="desperdicio_comida" 
+                                min="1" 
+                                max="3" 
+                                step="1" 
+                                value="2"
+                                class="input-range"
+                            >
+                            <div class="range-labels">
+                                <span>Poco / Nada</span>
+                                <span>Normal</span>
+                                <span>Frecuente</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="rango-compras" class="label-principal">
+                            Frecuencia de compra de ropa nueva o dispositivos electrónicos:
+                        </label>
+                        <div class="range-container">
+                            <input 
+                                type="range" 
+                                id="rango-compras" 
+                                name="frecuencia_compras" 
+                                min="1" 
+                                max="3" 
+                                step="1" 
+                                value="2"
+                                class="input-range"
+                            >
+                            <div class="range-labels">
+                                <span>Mínimo / Usado</span>
+                                <span>Moderado</span>
+                                <span>Alto (Mensual)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label class="label-principal">¿Qué materiales separas o reciclas en casa?</label>
+                        
+                        <div class="checkbox-group">
+                            <label class="checkbox-label" for="check-plastico">
+                                <input type="checkbox" id="check-plastico" name="reciclaje[]" value="plastico_vidrio" checked>
+                                <span class="custom-checkbox"></span>
+                                Plástico y Vidrio
+                            </label>
+
+                            <label class="checkbox-label" for="check-papel">
+                                <input type="checkbox" id="check-papel" name="reciclaje[]" value="papel_carton">
+                                <span class="custom-checkbox"></span>
+                                Cartón y Papel
+                            </label>
+
+                            <label class="checkbox-label" for="check-organicos">
+                                <input type="checkbox" id="check-organicos" name="reciclaje[]" value="organicos">
+                                <span class="custom-checkbox"></span>
+                                Residuos Orgánicos (Compostaje)
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit-carbono">Calcular Mi Huella</button>
+                </form>
+
+            </div> </section>
+    </main>
 
     <footer class="main-footer">
         <div class="container footer-columns">
@@ -59,9 +140,5 @@
             <p>&copy; 2026 EcoMarket. Proyecto Final HTML y CSS Puro.</p>
         </div>
     </footer>
-
-
-
-
 </body>
- </html>
+</html>
