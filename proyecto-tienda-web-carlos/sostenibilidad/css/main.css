@@ -1,0 +1,14 @@
+/* VARIABLES DE COLOR OBLIGATORIAS */
+:root {
+    --primary-color: #2ecc71;      /* Verde vivo principal */
+    --secondary-color: #27ae60;    /* Verde oscuro secundario */
+    --background-soft: #f5f5dc;    /* Beige de fondo suave */
+    --text-dark: #0f172a;          /* Gris oscuro de contraste */
+    --white-surface: #ffffff;      
+    
+    --card-radius: 16px;
+    --interface-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+    
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Montserrat', Arial, sans-serif;
+}
